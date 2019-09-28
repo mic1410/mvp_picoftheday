@@ -1,4 +1,4 @@
-package com.example.picoftheday
+package com.example.picoftheday.login
 
 class LoginPresenter(var loginView: LoginView?, val loginInteractor: LoginInteractor) :
     LoginInteractor.OnLoginFinishedListener {

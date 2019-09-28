@@ -1,13 +1,19 @@
-package com.example.picoftheday
+package com.example.picoftheday.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.picoftheday.R
+import com.example.picoftheday.picture.PictureActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), LoginView {
-    private val presenter = LoginPresenter(this, LoginInteractor())
+    private val presenter = LoginPresenter(
+        this,
+        LoginInteractor()
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +52,6 @@ class LoginActivity : AppCompatActivity(), LoginView {
     }
 
     override fun loginSuccessful() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        startActivity(Intent(this, PictureActivity::class.java))
     }
 }

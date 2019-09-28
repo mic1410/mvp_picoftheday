@@ -1,4 +1,4 @@
-package com.example.picoftheday
+package com.example.picoftheday.login
 
 import android.os.Handler
 

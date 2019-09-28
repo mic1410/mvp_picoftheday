@@ -3,7 +3,7 @@
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_login">Login</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in">Proceed</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="login_failed">"Login failed"</string>
     <string name="username_error">invalid username</string>
