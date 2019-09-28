@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), LoginView {
-    private val presenter = LoginPresenter(this)
+    private val presenter = LoginPresenter(this, LoginInteractor())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,12 +24,28 @@ class LoginActivity : AppCompatActivity(), LoginView {
         }
     }
 
+    override fun onDestroy() {
+        presenter.onDestroy()
+        super.onDestroy()
+    }
+
     override fun showProgress() {
         loading.visibility = View.VISIBLE
     }
 
     override fun hideProgress() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        loading.visibility = View.GONE
     }
 
+    override fun showUsernameError() {
+        username.error = getString(R.string.username_error)
+    }
+
+    override fun showPasswordError() {
+        password.error = getString(R.string.password_error)
+    }
+
+    override fun loginSuccessful() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 }
