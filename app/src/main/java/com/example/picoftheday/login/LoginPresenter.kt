@@ -14,6 +14,7 @@ class LoginPresenter(var loginView: LoginView?, val loginInteractor: LoginIntera
 
     override fun onSuccess() {
         loginView?.loginSuccessful()
+        loginView?.hideProgress()
     }
 
     fun login(username: String, password: String) {

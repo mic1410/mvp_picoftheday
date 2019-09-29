@@ -22,7 +22,11 @@ class PictureOfTheDayLoader {
             Log.d(TAG, "no json in Preferences")
 
             withContext(Dispatchers.IO) {
-                jsonString = URL(NASA_URL).readText()
+                try {
+                    jsonString = URL(NASA_URL).readText()
+                } catch (e: Exception) {
+                    Log.e(TAG, "Network exception")
+                }
                 Log.d(TAG, "network call result: $jsonString")
             }
 
