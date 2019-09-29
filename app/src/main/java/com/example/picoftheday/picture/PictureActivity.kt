@@ -22,6 +22,8 @@ class PictureActivity : AppCompatActivity(), PictureView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_picture)
 
+        reloadButton.setOnClickListener { presenter.reloadButtonClicked() }
+
         presenter.onCreate()
     }
 

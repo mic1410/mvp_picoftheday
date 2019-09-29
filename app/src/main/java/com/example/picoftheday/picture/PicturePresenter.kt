@@ -33,4 +33,10 @@ class PicturePresenter(
     fun onResume() {
         Log.d(TAG, "onResume")
     }
+
+    fun reloadButtonClicked() {
+        GlobalScope.launch(Dispatchers.Main) {
+            pictureOfTheDay = pictureOfTheDayLoader.reLoadPictureOfTheDay(sharedPreferencesRepository)
+        }
+    }
 }

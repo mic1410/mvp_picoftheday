@@ -9,4 +9,5 @@
     <string name="username_error">invalid username</string>
     <string name="password_error">invalid password</string>
     <string name="reload_image">Reload image</string>
+    <string name="hint">Hint: username and password should be at least 1 char long</string>
 </resources>

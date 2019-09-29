@@ -38,4 +38,10 @@ class PictureOfTheDayLoader {
 
         return pictureOfTheDay
     }
+
+    suspend fun reLoadPictureOfTheDay(sharedPreferencesRepository: SharedPreferencesRepository): PictureOfTheDay? {
+        Log.d(TAG, "clearing json and reloading")
+        sharedPreferencesRepository.clearJsonString()
+        return loadPictureOfTheDay(sharedPreferencesRepository)
+    }
 }
