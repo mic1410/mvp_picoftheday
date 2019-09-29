@@ -21,7 +21,6 @@ class LoginActivity : AppCompatActivity(), LoginView {
         setContentView(R.layout.activity_login)
 
         val loginButton = findViewById<Button>(R.id.loginButton)
-
         loginButton.setOnClickListener {
             presenter.login(
                 username.text.toString(),

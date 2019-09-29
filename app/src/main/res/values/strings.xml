@@ -8,4 +8,5 @@
     <string name="login_failed">"Login failed"</string>
     <string name="username_error">invalid username</string>
     <string name="password_error">invalid password</string>
+    <string name="reload_image">Reload image</string>
 </resources>
